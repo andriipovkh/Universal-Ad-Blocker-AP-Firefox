@@ -45,6 +45,8 @@ A comprehensive ad blocker that removes ads from Google, LinkedIn, YouTube, Redd
 3. Submit your extension for review
 4. Once approved, you can install it from the Mozilla Add-ons store
 
+I've published it from my account, you can either search it in oficial Firefox extensions store or use this direct link: https://addons.mozilla.org/en-US/firefox/addon/universal-ad-blocker-ap/
+
 ### Creating the XPI Package
 
 To package the extension for distribution:
