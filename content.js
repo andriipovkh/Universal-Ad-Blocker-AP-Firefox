@@ -8,6 +8,11 @@
     function removeGoogleAds() {
         let adsRemoved = 0;
         
+        // Skip YouTube entirely to avoid breaking functionality
+        if (window.location.hostname.includes('youtube.com')) {
+            return false;
+        }
+        
         // Remove Google ad iframes
         const adIframes = document.querySelectorAll('iframe[id*="google_ads"], iframe[src*="googlesyndication"], iframe[src*="doubleclick"], iframe[data-google-container-id]');
         adIframes.forEach(iframe => {
@@ -23,8 +28,6 @@
             '.sdaContainer, ' +
             '[id*="google_ad"], ' +
             '[class*="google_ad"], ' +
-            'div[id*="ad-"], ' +
-            'div[class*="ad-container"], ' +
             'div[aria-label="Advertisement"]'
         );
         adContainers.forEach(container => {
@@ -119,29 +122,6 @@
                     parent.remove();
                     adsRemoved++;
                 }
-            }
-        });
-        
-        // Remove YouTube ads
-        const youtubeAds = document.querySelectorAll(
-            'ytd-ad-slot-renderer, ' +
-            'ytd-in-feed-ad-layout-renderer, ' +
-            'ytd-rich-item-renderer:has(ytd-ad-slot-renderer), ' +
-            '.ytd-ad-slot-renderer, ' +
-            'ad-slot-renderer, ' +
-            '[class*="ad-slot"], ' +
-            '[class*="AdSlot"]'
-        );
-        youtubeAds.forEach(ad => {
-            // Check if it's a YouTube ad
-            if (ad.tagName === 'YTD-AD-SLOT-RENDERER' ||
-                ad.tagName === 'YTD-IN-FEED-AD-LAYOUT-RENDERER' ||
-                ad.querySelector('ytd-ad-slot-renderer') ||
-                ad.querySelector('ytd-in-feed-ad-layout-renderer') ||
-                ad.querySelector('[class*="ytwTopLandscapeImageLayoutViewModelHost"]') ||
-                ad.querySelector('ad-badge-view-model')) {
-                ad.remove();
-                adsRemoved++;
             }
         });
         
@@ -502,12 +482,6 @@
         .noindex-section[data-nosnippet],
         .ad-banner-container,
         section.ad-banner-container,
-        ytd-ad-slot-renderer,
-        ytd-in-feed-ad-layout-renderer,
-        ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
-        ad-slot-renderer,
-        [class*="ad-slot"],
-        [class*="AdSlot"],
         shreddit-comments-page-ad,
         shreddit-ad-post,
         [class*="promotedlink"],
