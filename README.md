@@ -6,7 +6,6 @@ A comprehensive ad blocker that removes ads from Google, LinkedIn, YouTube, Redd
 
 - Blocks Google Ads (AdSense, DoubleClick)
 - Removes LinkedIn sponsored content
-- Blocks YouTube ads
 - Removes Reddit promoted posts
 - Blocks Twitter/X ads
 - Removes various overlay and banner ads
