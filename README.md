@@ -100,9 +100,8 @@ This extension:
 ## License
 
 This extension is provided as-is for personal use.
-Any support appreciated.
-Crypto ETH wallet: 0xA07170D3306917eae333F0763BaB61ACbbE3150F
 
 ## Support
 
-If you encounter any issues or have suggestions contact me on telegram: @AndriiPovkh, or please check the browser console for error messages.
+If you encounter any issues or have suggestions contact me on telegram or Twitter\X: @AndriiPovkh, or please check the browser console for error messages.
+Any support is appreciated. Crypto ETH wallet: 0xA07170D3306917eae333F0763BaB61ACbbE3150F
